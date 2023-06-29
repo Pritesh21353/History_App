@@ -22,7 +22,7 @@ class _SplashscreenState extends State<Splashscreen> {
     Timer(Duration(seconds: 5), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => HomePage()),
+        MaterialPageRoute(builder: (context) => HomeScreen()),
       );
     });
   }
@@ -30,7 +30,24 @@ class _SplashscreenState extends State<Splashscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text("PRiteshhhhhh"),
+      backgroundColor: Color.fromARGB(255, 24, 25, 26),
+      body: SingleChildScrollView(
+        child: Container(
+          width: double.infinity,
+          child: Column(
+            children: [
+              SizedBox(
+                height: 200,
+              ),
+              Image.asset(
+                'assets/images/splashscreen.avif',
+                height: 200,
+                width: 300,
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
